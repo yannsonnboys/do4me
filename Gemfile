@@ -6,7 +6,10 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.6'
+gem 'sqlite3', '~> 1.3.6', group: :development
+
+gem 'pg', group: :production
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -19,6 +22,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'fog-aws'
 # Use Figaro
 gem 'figaro'
+# Use rails_12factor
+gem 'rails_12factor', group: :production
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
